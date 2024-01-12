@@ -30,9 +30,7 @@ This project converted the Amado template static HTML into a dynamic online stor
 
 ### Live preview
 
-<video autoplay loop muted playsinline src="screenshots/unicorn-preview.mp4"></video>
 
-https://github.com/basma-khalil/unicorn/assets/110143256/e2696f42-0b2c-49c5-8521-9e2710e5dfeb
 
 ### Built With
 
