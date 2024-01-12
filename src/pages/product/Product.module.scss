@@ -1,0 +1,110 @@
+@use "../../assets/styles/1-helpers/1-2-mixin" as *;
+
+.product__container {
+    .product__breadcrumb {
+        margin-top: 3.125rem;
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .product__wrap {
+        align-items: flex-start;
+        column-gap: 2rem;
+    }
+
+    .product__slider {
+        width: 100%;
+
+        @include breakpoint(large) {
+            width: calc((100% - 2rem) / (12 / 7));
+        }
+    }
+
+    .product__description {
+        width: 100%;
+
+        .product__price {
+            position: relative;
+            margin: 0;
+            padding-top: 1rem;
+            color: var(--minor-color);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        h1 {
+            margin: 1rem 0;
+            line-height: 1;
+        }
+
+        .product__rating {
+            .review {
+                color: var(--minor-font-color);
+                font-size: 0.875rem;
+            }
+
+            .stars ul {
+                font-size: 1.3rem;
+                line-height: 1;
+
+                li {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .product__availability {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+
+            span:first-child {
+                display: inline-block;
+                width: 0.6rem;
+                height: 0.6rem;
+                margin-right: 3px;
+                background-color: var(--available-color);
+                border-radius: 50%;
+
+                &.unavailable {
+                    background-color: var(--unavailable-color);
+                }
+            }
+
+            span:last-child.unavailable {
+                color: var(--unavailable-color);
+            }
+        }
+
+        .product__overview {
+            margin: 3rem 0;
+            line-height: 2;
+        }
+
+        form {
+            .product__qty {
+                width: 9rem;
+                font-size: 1rem;
+
+                label,
+                input,
+                button {
+                    color: var(--minor-font-color);
+                }
+
+                input {
+                    width: 3rem;
+                }
+            }
+
+            :global(.main--btn) {
+                width: 100%;
+                max-width: 19.375rem;
+                margin-top: 3.125rem;
+            }
+        }
+
+        @include breakpoint(large) {
+            width: calc((100% - 2rem) / (12 / 5));
+        }
+    }
+}

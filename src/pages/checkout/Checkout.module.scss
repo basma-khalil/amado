@@ -1,0 +1,110 @@
+// @use '../../assets/styles/1-helpers/1-2-mixin' as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.checkout__container {
+    h2 {
+        margin-top: 3.125rem;
+        font-size: 1.875rem;
+    }
+
+    form {
+        align-items: flex-start;
+        column-gap: 2rem;
+
+        input,
+        select,
+        option,
+        textarea {
+            padding: 1.5rem 2rem;
+            color: var(--minor-font-color);
+            background-color: var(--light-bg-color);
+            border: 0;
+            border-radius: 0;
+            outline: 0;
+            font-size: 0.875rem;
+            text-transform: capitalize;
+
+            &:focus {
+                border-color: #80bdff;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+        }
+
+        input:not([type="checkbox"], [type="radio"]),
+        select,
+        option,
+        textarea {
+            width: 100%;
+        }
+
+        label {
+            display: flex;
+
+            span {
+                color: var(--minor-font-color);
+                font-size: 0.875rem;
+            }
+        }
+
+        option {
+            line-height: 2.5rem;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 6.25rem;
+        }
+
+        .select-wrap {
+            padding-right: 5px;
+            background-color: var(--light-bg-color);
+        }
+    }
+
+    .customer-details {
+        width: 100%;
+
+        div {
+            margin-bottom: 1rem;
+        }
+
+        @include breakpoint(small) {
+            .half--width {
+                display: flex;
+                column-gap: 2rem;
+                margin-bottom: 0;
+
+                div {
+                    width: calc(50% - 1rem);
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+            width: calc((100% - 2rem) / (12 / 8));
+        }
+    }
+
+    .order-summary {
+        width: 100%;
+        padding: 1.875rem 1.25rem;
+        background-color: var(--light-bg-color);
+
+        ul {
+            color: var(--minor-font-color);
+            font-size: 0.875rem;
+
+            li {
+                margin-bottom: 1.875rem;
+
+                img {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        @include breakpoint(medium) {
+            width: calc((100% - 2rem) / (12 / 4));
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.pagination {
+    margin-top: 3.125rem;
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .page-num a {
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        text-align: center;
+        transition: color var(--normal-duration),
+            background-color var(--normal-duration);
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: var(--main-bg-color);
+            background-color: var(--minor-color);
+        }
+    }
+}

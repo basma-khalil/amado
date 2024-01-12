@@ -1,0 +1,31 @@
+// @use '../../../../assets/styles/1-helpers/1-2-mixin' as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.shop__products {
+    width: 100%;
+
+    .products-wrap {
+        display: grid;
+        row-gap: 3.125rem;
+
+        &.grid {
+            grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+            column-gap: 2rem;
+            row-gap: 3.125rem;
+        }
+    }
+
+    @include breakpoint(x-small) {
+        order: 2;
+        width: calc(100% - 14.375rem);
+    }
+
+    @media (min-width: $small-screen) and (max-width: $medium-screen) {
+        order: 1;
+        width: 100%;
+    }
+
+    @include breakpoint(large) {
+        width: calc(95% - 14.375rem);
+    }
+}

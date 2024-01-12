@@ -1,0 +1,19 @@
+/* ---- Modifiers Rules ---- */
+
+.reset--btn {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.capital--first--letter {
+    text-transform: lowercase;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}

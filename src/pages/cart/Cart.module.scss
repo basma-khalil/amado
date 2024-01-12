@@ -1,0 +1,84 @@
+// @use '../../assets/styles/1-helpers/1-2-mixin' as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.cart__container {
+    .cart__header {
+        margin-top: 3.125rem;
+        font-size: 1.875rem;
+    }
+
+    .cart__wrap {
+        align-items: flex-start;
+        column-gap: 2rem;
+    }
+
+    .table-wrap {
+        width: 100%;
+        overflow: auto;
+
+        @include breakpoint(medium) {
+            width: calc((100% - 2rem) / (12 / 8));
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        th,
+        td {
+            flex: 0 0 25%;
+            width: 25%;
+            padding: 0.75rem;
+        }
+
+        th {
+            height: 2.5rem;
+            background-color: var(--light-bg-color);
+            font-size: 0.75rem;
+            font-weight: normal;
+            text-align: start;
+        }
+
+        h4 {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+        }
+    }
+
+    .delete-btn {
+        position: static;
+        align-self: flex-end;
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .order-summary {
+        width: 100%;
+        padding: 1.875rem 1.25rem;
+        background-color: var(--light-bg-color);
+
+        ul {
+            color: var(--minor-font-color);
+            font-size: 0.875rem;
+
+            li {
+                margin-bottom: 1.875rem;
+            }
+        }
+
+        :global(.main--btn) {
+            width: 100%;
+            margin-top: 6.25rem;
+        }
+
+        @include breakpoint(medium) {
+            width: calc((100% - 2rem) / (12 / 4));
+        }
+    }
+}

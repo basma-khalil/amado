@@ -1,0 +1,29 @@
+.qty-input {
+    width: 7.25rem;
+    background-color: var(--light-bg-color);
+    font-size: 0.875rem;
+
+    label {
+        padding: 0 0.75rem;
+    }
+
+    input {
+        width: 1.75rem;
+        height: 40px;
+        background-color: transparent;
+        text-align: center;
+        border: 0;
+        appearance: textfield;
+        -moz-appearance: textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    button {
+        height: 40px;
+    }
+}

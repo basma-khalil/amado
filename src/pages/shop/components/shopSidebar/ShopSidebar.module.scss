@@ -1,0 +1,114 @@
+// @use '../../../../assets/styles/1-helpers/1-2-mixin' as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.shop__sidebar {
+    width: 100%;
+    max-width: none;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    background-color: var(--light-bg-color);
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 1.875rem;
+    }
+
+    .shop__widget {
+        margin-bottom: 3.125rem;
+    }
+
+    .catagories li {
+        margin: 1rem 0;
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1.25rem;
+            color: var(--light-font-color);
+            text-align: start;
+            transition: color var(--normal-duration);
+
+            &:hover,
+            &:focus,
+            &.active {
+                color: var(--minor-color);
+            }
+        }
+    }
+
+    .brands li {
+        margin-bottom: 2rem;
+        color: var(--light-font-color);
+    }
+
+    .colors li {
+        display: inline-block;
+        width: 25%;
+        margin-bottom: 1rem;
+
+        input[type="checkbox"]:checked ~ label .color,
+        input[type="checkbox"]:focus-visible ~ label .color,
+        .color:hover {
+            outline: 2px solid var(--minor-color);
+            outline-offset: 1px;
+        }
+    }
+
+    .color {
+        display: inline-block;
+        width: 1.875rem;
+        height: 1.875rem;
+        border-radius: 50%;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+
+    .white {
+        background-color: white;
+    }
+
+    .gray {
+        background-color: #969696;
+    }
+
+    .black {
+        background-color: #030303;
+    }
+
+    .blue {
+        background-color: #0315ff;
+    }
+
+    .red {
+        background-color: #dc0647;
+    }
+
+    .yellow {
+        background-color: #fff56a;
+    }
+
+    .orange {
+        background-color: #f26e51;
+    }
+
+    .brown {
+        background-color: #9a8777;
+    }
+
+    .price {
+        .range-values {
+            margin-top: 1.25rem;
+            color: var(--light-font-color);
+        }
+    }
+
+    @include breakpoint(x-small) {
+        order: 1;
+        width: 14.375rem;
+    }
+
+    @media (min-width: $small-screen) and (max-width: $medium-screen) {
+        order: 2;
+        width: 100%;
+    }
+}

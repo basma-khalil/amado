@@ -1,0 +1,35 @@
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.products-tabbar {
+    row-gap: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.875rem;
+
+    .total-products {
+        width: 100%;
+        margin: 0;
+        color: var(--main-font-color);
+        text-transform: uppercase;
+    }
+
+    .products-view {
+        .grid-btn {
+            padding: 0.6rem;
+            background-color: var(--dark-font-color);
+            color: var(--main-bg-color);
+        }
+
+        .list-btn {
+            background-color: var(--dark-font-color);
+        }
+
+        .active-view {
+            background-color: var(--minor-color);
+        }
+    }
+
+    .products-sorting {
+        display: flex;
+        column-gap: 1rem;
+    }
+}

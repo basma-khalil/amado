@@ -1,0 +1,131 @@
+// @use '../../../../../../assets/styles/1-helpers/1-2-mixin' as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.product-card {
+    display: flex;
+
+    .thumbnail {
+        position: relative;
+
+        a {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: var(--normal-duration);
+            z-index: 10;
+        }
+    }
+
+    header {
+        margin-top: 1.57rem;
+
+        .metadata {
+            width: 50%;
+            align-items: flex-start;
+            line-height: 1;
+        }
+
+        .price {
+            position: relative;
+            margin: 0;
+            padding-top: 1rem;
+            color: var(--minor-color);
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            margin: 0;
+
+            a {
+                padding: 1rem 0;
+            }
+        }
+
+        .tools {
+            width: 50%;
+            align-items: flex-end;
+
+            .ratings ul {
+                display: flex;
+                font-size: 1.3rem;
+                line-height: 1;
+
+                li {
+                    margin-right: 0;
+                    margin-left: 3px;
+                    cursor: default;
+                }
+            }
+        }
+
+        .cart,
+        .heart {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 30px;
+            height: 36px;
+            margin-top: 0.5rem;
+            padding: 0;
+            color: var(--light-font-color);
+            transition: color var(--normal-duration);
+
+            &:hover:not(:disabled),
+            &:focus {
+                color: var(--minor-color);
+            }
+        }
+
+        .cart {
+            margin-right: 0.5rem;
+        }
+
+        .full-heart {
+            color: var(--minor-color);
+            animation: beat var(--fast-duration);
+        }
+
+        @keyframes beat {
+            50% {
+                transform: scale(1.3);
+            }
+        }
+    }
+
+    &.grid {
+        flex-direction: column;
+    }
+
+    &.list {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .thumbnail {
+            width: 6.25rem;
+            margin-right: 1.57rem;
+        }
+
+        header {
+            width: calc(100% - 6.25rem);
+            margin-top: 0;
+            align-items: flex-start;
+        }
+    }
+
+    &:hover .hover-img {
+        visibility: visible;
+        opacity: 1;
+    }
+}

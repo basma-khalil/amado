@@ -1,0 +1,59 @@
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.fav__container {
+    .fav__header {
+        margin-top: 3.125rem;
+        font-size: 1.875rem;
+    }
+
+    .table-wrap {
+        overflow: auto;
+    }
+
+    table {
+        border-collapse: collapse;
+
+        tr {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        th,
+        td {
+            flex: 0 0 25%;
+            width: 25%;
+            padding: 0.75rem;
+        }
+
+        th {
+            height: 2.5rem;
+            background-color: var(--light-bg-color);
+            font-size: 0.75rem;
+            font-weight: normal;
+            text-align: start;
+        }
+
+        h4 {
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+        }
+    }
+
+    .cart {
+        transition: color var(--normal-duration);
+
+        &:hover,
+        &:focus {
+            color: var(--minor-color);
+        }
+
+        &:disabled {
+            color: var(--light-font-color);
+        }
+    }
+    .delete-btn {
+        position: static;
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}

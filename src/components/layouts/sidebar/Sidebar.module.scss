@@ -1,0 +1,117 @@
+// @use "../../../assets/styles/1-helpers/1-2-mixin" as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.site-sidebar {
+    grid-area: aside;
+    position: fixed;
+    top: 0;
+    left: -20rem;
+    height: 100%;
+    width: 20rem;
+    padding: 3.75rem 4.7rem;
+    background-color: var(--main-bg-color);
+    transition: transform var(--normal-duration);
+    overflow-y: auto;
+    z-index: 100;
+
+    &.open-sidebar {
+        transform: translateX(20rem);
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    ul li a,
+    ul li button {
+        display: block;
+        text-transform: uppercase;
+
+        &:not(:hover, :active, :focus, :global(.active)) {
+            color: var(--dark-font-color);
+        }
+    }
+
+    nav {
+        margin-top: 6.25rem;
+        margin-bottom: 2.5rem;
+
+        a {
+            position: relative;
+            padding: 1.25rem 0;
+            font-size: 0.9rem;
+            line-height: 0.9;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -6.7rem;
+                width: 2rem;
+                height: 3px;
+                background-color: var(--minor-color);
+                transition: transform var(--normal-duration);
+            }
+
+            &:hover::before,
+            &:focus::before,
+            &:global(.active)::before {
+                transform: translateX(2rem);
+            }
+        }
+    }
+
+    .user-tools {
+        margin-top: 6.25rem;
+        margin-bottom: 5.25rem;
+
+        a,
+        button {
+            padding: 1rem 0;
+
+            svg {
+                margin-right: 1rem;
+                font-size: 1.4rem;
+            }
+
+            svg,
+            span {
+                color: var(--light-font-color);
+            }
+
+            &:global(.active) {
+                color: var(--minor-color);
+            }
+        }
+
+        button {
+            width: 100%;
+            text-align: start;
+            transition: color var(--normal-duration);
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--minor-color);
+            }
+        }
+    }
+
+    .social a {
+        font-size: 1.1rem;
+
+        &:not(:hover, :active, :focus) {
+            color: var(--light-font-color);
+        }
+    }
+
+    @include breakpoint(small) {
+        position: relative;
+        left: 0;
+        height: auto;
+
+        :global(.nav-close) {
+            display: none;
+        }
+    }
+}

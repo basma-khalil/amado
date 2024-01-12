@@ -1,0 +1,26 @@
+{
+  "id": 0,
+  "title": "product title",
+  "price": 100,
+  "description": "product description",
+  "date": "2023-09-1",
+  "image": {
+    "original": "https://placehold.co/533x533",
+    "overlay": "https://placehold.co/460x571",
+    "sizes": {
+      "460X571": "https://placehold.co/460x571",
+      "166X166": "https://placehold.co/166x166"
+    },
+    "details": {
+      "img1": "https://placehold.co/723x747",
+      "img2": "https://placehold.co/723x747",
+      "img3": "https://placehold.co/723x747",
+      "img4": "https://placehold.co/723x747"
+    }
+  },
+  "category": ["product categories 1", "product categories 2"],
+  "brand": "product brand",
+  "color": "product color",
+  "rating": 0,
+  "inStock": 100
+}

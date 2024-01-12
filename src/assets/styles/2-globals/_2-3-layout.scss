@@ -1,0 +1,65 @@
+/* ---- Layout Rules ---- */
+
+.site-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+        "hd"
+        "main"
+        "newsletter"
+        "ft";
+    margin-left: auto;
+    margin-right: auto;
+
+    @include breakpoint(small) {
+        grid-template-columns: 20rem 1fr;
+        grid-template-areas:
+            "hd hd"
+            "aside main"
+            "newsletter newsletter"
+            "ft ft";
+    }
+}
+
+main {
+    grid-area: main;
+}
+
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem 2rem;
+
+    @include breakpoint(x-small) {
+        max-width: 540px;
+    }
+
+    @include breakpoint(small) {
+        max-width: 750px;
+    }
+
+    @include breakpoint(medium) {
+        max-width: 970px;
+    }
+
+    @include breakpoint(large) {
+        max-width: 1170px;
+    }
+}
+
+.flex--row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+.flex--col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,25 @@
+.go-top-btn {
+    grid-area: toTop;
+    position: fixed;
+    visibility: hidden;
+    bottom: 3.75rem;
+    right: 3.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--minor-color);
+    color: var(--main-bg-color);
+    opacity: 0;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    transition: all var(--normal-duration);
+    z-index: 1000;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--dark-font-color);
+    }
+}

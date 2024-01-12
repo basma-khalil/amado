@@ -1,0 +1,60 @@
+// @use '../../../assets/styles/1-helpers/1-2-mixin' as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+.image-gallery {
+    .image-gallery-left-nav,
+    .image-gallery-right-nav {
+        display: none;
+    }
+
+    .image-gallery-slide img {
+        object-fit: cover;
+        cursor: zoom-in;
+    }
+
+    .image-gallery-thumbnails-wrapper {
+        margin-top: 1rem;
+    }
+
+    .image-gallery-thumbnail {
+        width: 24.5%;
+
+        img {
+            height: 5rem;
+            object-fit: cover;
+            cursor: pointer;
+
+            @include breakpoint(small) {
+                height: 8.75rem;
+            }
+        }
+
+        &.active,
+        &:hover {
+            border: 2px solid var(--minor-color);
+        }
+    }
+
+    .image-gallery-content.fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        z-index: 999;
+
+        .image-gallery-slide img {
+            width: auto;
+            cursor: zoom-out;
+        }
+
+        .image-gallery-thumbnails-wrapper {
+            display: none;
+        }
+    }
+}

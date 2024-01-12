@@ -1,0 +1,27 @@
+.breadcrumbs {
+    justify-content: flex-start;
+
+    .crumb {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+
+        &::after {
+            content: ">";
+            margin: 0 1rem;
+            color: var(--minor-font-color);
+        }
+
+        &:last-child {
+            cursor: text;
+
+            a {
+                pointer-events: none;
+                color: var(--minor-font-color);
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

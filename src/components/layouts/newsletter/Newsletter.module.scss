@@ -1,0 +1,68 @@
+// @use "../../../assets/styles/1-helpers/1-2-mixin" as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.newsletter {
+    grid-area: newsletter;
+    column-gap: 2rem;
+    background-color: var(--minor-bg-color);
+
+    :global(.flex--row) {
+        row-gap: 5rem;
+    }
+
+    h2 {
+        margin: 0;
+        color: var(--main-bg-color);
+        font-size: 2.25rem;
+
+        span {
+            color: var(--minor-color);
+            text-transform: capitalize;
+        }
+    }
+
+    p {
+        color: var(--light-font-color);
+    }
+
+    .subscribe-form {
+        display: flex;
+        width: 100%;
+
+        input,
+        button {
+            height: 3rem;
+            padding: 0 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        input {
+            width: 100%;
+            color: var(--light-font-color);
+            font-style: italic;
+            border: 0;
+        }
+
+        button {
+            background-color: var(--minor-color);
+            color: var(--main-bg-color);
+        }
+    }
+
+    @include breakpoint(medium) {
+        .newsletter__text,
+        .subscribe-form {
+            width: calc(50% - 2rem);
+        }
+    }
+
+    @include breakpoint(large) {
+        .newsletter__text {
+            width: calc((100% - 2rem) / (12 / 7));
+        }
+
+        .subscribe-form {
+            width: calc((100% - 2rem) / (12 / 5));
+        }
+    }
+}

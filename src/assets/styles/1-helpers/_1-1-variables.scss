@@ -1,0 +1,40 @@
+/* ---- Css Main Variables ---- */
+
+/* Colors */
+:root {
+
+    /* Fonts */
+    --font-family: "helveticaneuemedium", sans-serif;
+
+    /* Colors */
+    --main-bg-color: #fff;
+    --minor-bg-color: #3c3c3c;
+    --light-bg-color: #f5f7fa;
+    --dark-bg-color: #252525;
+
+    --overlay-bg-color: rgba(60, 60, 60, 0.7);
+
+    --main-font-color: #242424;
+    --minor-font-color: #6d6d6d;
+    --dark-font-color: #131212;
+    --light-font-color: #959595;
+
+    --minor-color: #fbb710;
+
+    --available-color: #20d34a;
+    --unavailable-color: #ff4332;
+
+    /* Durations */
+    --slow-duration: 1s;
+    --normal-duration: 0.5s;
+    --fast-duration: 0.3s;
+}
+
+
+/* ---- Sass Main Variables ---- */
+
+/* Media Query Breakpoints */
+// $x-small-screen: 576px;
+// $small-screen: 768px;
+// $medium-screen: 992px;
+// $large-screen: 1200px;

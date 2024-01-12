@@ -1,0 +1,14 @@
+@import "react-toastify/dist/ReactToastify.css";
+
+.Toastify__toast-body > div:last-child {
+    text-transform: lowercase;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+:root {
+    /* Override toastify variables */
+    --toastify-color-success: var(--minor-color);
+}

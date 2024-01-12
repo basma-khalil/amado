@@ -1,0 +1,36 @@
+// @use "../../../assets/styles/1-helpers/1-2-mixin" as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.site-header {
+    grid-area: hd;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    z-index: 99;
+
+    :global(.container) {
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+    }
+
+    .mobile-logo {
+        margin: 0;
+    }
+
+    .nav-toggler {
+        color: var(--minor-color);
+    }
+
+    @media (min-width: $x-small-screen) and (max-width: $small-screen) {
+        :global(.container) {
+            max-width: 100%;
+        }
+    }
+
+    @include breakpoint(small) {
+        display: none;
+    }
+}

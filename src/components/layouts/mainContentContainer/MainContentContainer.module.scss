@@ -1,0 +1,10 @@
+// @use '../../../assets/styles/1-helpers/1-2-mixin' as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.main-content {
+    padding: 6.25rem 1rem;
+
+    @include breakpoint(large) {
+        width: 95%;
+    }
+}

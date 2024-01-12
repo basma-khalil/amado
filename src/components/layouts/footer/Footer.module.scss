@@ -1,0 +1,110 @@
+// @use "../../../assets/styles/1-helpers/1-2-mixin" as *;
+@use "src/assets/styles/1-helpers/1-2-mixin" as *;
+
+.site-footer {
+    grid-area: ft;
+    background-color: var(--dark-bg-color);
+
+    :global(.container) {
+        row-gap: 1.5rem;
+    }
+
+    .copywrite {
+        font-size: 0.8rem;
+
+        a {
+            color: var(--minor-font-color);
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: var(--main-bg-color);
+            }
+        }
+    }
+
+    .footer__menu {
+        width: 100%;
+
+        .nav-toggler {
+            margin-bottom: 1rem;
+            background-color: var(--minor-color);
+        }
+
+        nav {
+            visibility: hidden;
+            max-height: 0;
+            overflow: hidden;
+            transition: visibility var(--slow-duration) ease-in-out,
+                max-height var(--slow-duration) ease-in-out;
+
+            &.open {
+                visibility: visible;
+                max-height: 50rem;
+                // animation: slideDown var(--slow-duration) ease-in-out forwards;
+            }
+        }
+
+        // @keyframes slideDown {
+        //     0% {
+        //         max-height: 0;
+        //     }
+
+        //     100% {
+        //         max-height: 50rem;
+        //     }
+        // }
+
+        ul {
+            width: 100%;
+
+            a {
+                display: block;
+                padding: 0.6rem 0;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+
+                &:not(:hover, :active, :focus) {
+                    color: var(--main-bg-color);
+                }
+
+                &[aria-current="page"] {
+                    color: var(--minor-color);
+                }
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        .footer__text {
+            width: calc(100% / (12 / 4));
+        }
+
+        .footer__menu {
+            width: calc(100% / (12 / 8));
+
+            .nav-toggler {
+                display: none;
+            }
+
+            nav {
+                visibility: visible;
+                max-height: none;
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                li:last-child a {
+                    padding-right: 0;
+                }
+
+                a {
+                    padding: 0.6rem 2rem;
+                }
+            }
+        }
+    }
+}
