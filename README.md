@@ -30,11 +30,11 @@ This project converted the Amado template static HTML into a dynamic online stor
 
 ### Live preview
 
-
+https://github.com/basma-khalil/amado/assets/110143256/ad3b1b71-baeb-40ea-823d-48e466df5d74
 
 ### Built With
 
-[![Built With](https://skillicons.dev/icons?i=react,js,sass,redux,firebase)](https://skillicons.dev)
+[![Built With](https://skillicons.dev/icons?i=react,js,sass,redux,cypress,firebase)](https://skillicons.dev)
 
 ### Features
 
@@ -48,7 +48,7 @@ This project converted the Amado template static HTML into a dynamic online stor
 - Filter, sort, and search products by URL [using searchParams]
 - Checkout form
 - Back to top button
-- Skip to main content link
+- Skip to the main content link
 - Easy navigation
 - Responsive web design
 - Cross Browser Support
@@ -136,4 +136,4 @@ This code is licensed under the **Attribution-NonCommercial-ShareAlike** License
 
 ## Demo
 
-For Demo of this template you can visit [https://unicorn-theme.netlify.app](https://unicorn-theme.netlify.app "Go to website")
+For Demo of this template you can visit [https://amado-theme.web.app](https://amado-theme.web.app "Go to website")
