@@ -1,6 +1,8 @@
 # Amado Theme
 
-A dynamic E-commerce website built based on the Amado template.
+A dynamic E-commerce website built based on the Amado template
+
+![Amado responsive](preview/amado-responsive.png)
 
 ## Table of Contents
 
@@ -8,7 +10,7 @@ A dynamic E-commerce website built based on the Amado template.
   - [Table of Contents](#table-of-contents)
   - [About the Project](#about-the-project)
     - [Description](#description)
-    - [Live preview](#live-preview)
+    - [Preview](#preview)
     - [Built With](#built-with)
     - [Features](#features)
     - [Usability](#usability)
@@ -28,7 +30,7 @@ A dynamic E-commerce website built based on the Amado template.
 
 This project converted the Amado template static HTML into a dynamic online store website built with [**React**](https://react.dev/ "Go to website"), [**Sass**](https://sass-lang.com/ "Go to website"), and **ES6**, bootstrapped with [**Create React App**](https://create-react-app.dev/ "Go to website"), along with using [**Redux Toolkit**](https://redux-toolkit.js.org/ "Go to website"), [**RTK Query**](https://redux-toolkit.js.org/rtk-query/overview "Go to website"), and [**React Router 6**](https://reactrouter.com/ "Go to website") to customize and manage the app, [**Firebase**](https://firebase.google.com/ "Go to website") as a backend cloud computing services, and [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/ "Go to website") and [**Cypress**](https://www.cypress.io/ "Go to website") to perform **Unit Testing**, **Integration Testing**, and **End to End Testing** for the app.
 
-### Live preview
+### Preview
 
 https://github.com/basma-khalil/amado/assets/110143256/ad3b1b71-baeb-40ea-823d-48e466df5d74
 
@@ -136,4 +138,4 @@ This code is licensed under the **Attribution-NonCommercial-ShareAlike** License
 
 ## Demo
 
-For Demo of this template you can visit [https://amado-theme.web.app](https://amado-theme.web.app "Go to website")
+For Demo of this template you can visit [bk-amado.web.app](https://bk-amado.web.app "Go to website")
